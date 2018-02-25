@@ -1,0 +1,9 @@
+/*to hide the brakets add this to your css*/
+
+[ng\:cloak], [ng-cloak], .ng-cloak{
+    display: none;
+}
+
+tr[ng-click] {
+    cursor: pointer;
+}
