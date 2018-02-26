@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col">
                     <p><small>* You can search by <strong>name</strong>, <strong>rating</strong>, <strong>author</strong> and <strong>tag</strong></small></p>
-                    <p><small>* You have selected <strong>{{selected.counter}}</strong> items, only <strong>{{repeatLimit}}</strong> will show up.</small></p>
+                    <p><small>* You have selected <strong>{{selected.counter}}</strong> items, only <strong>{{selectLimit}}</strong> will show up.</small></p>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -35,7 +35,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="dapp in allProjects | filter:searchDapp | limitTo:repeatLimit" ng-class="{'table-primary':$index==selectedRow}" ng-click="rowSelected($index,dapp.name); showHide();">
+                            <tr ng-repeat="dapp in allProjects | filter:searchDapp | limitTo:searchLimit" ng-class="{'table-primary':$index==selectedRow}" ng-click="rowSelected($index,dapp.name); showHide();">
                                 <th scope="row">{{$index+1}}</th>
                                 <th>{{dapp.name}}</th>
                                 <td>{{dapp.rating}}</td>
@@ -45,16 +45,25 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!--<div class="col" ng-show="showHideSelected">
+                    <ul class="list-group list-group-flush" ng-repeat="selected in selectedData | limitTo:selectLimit">
+                        <li class="list-group-item">{{selected.name}}</li>
+                        <li class="list-group-item">{{selected.rating}}</li>
+                        <li class="list-group-item">{{selected.author}}</li>
+                        <li class="list-group-item">{{selected.tag}}</li>
+                    </ul>
+                </div>-->
             </div>
         </div>
     </section>
 
-    <section ng-show="searchDapp">
+    <!--<section ng-show="searchDapp">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="col" ng-show="showHide">
-                        <ul class="list-group" ng-repeat="selected in selectedData | limitTo:repeatLimit">
+                    <div class="col" ng-show="showHideSelected">
+                        <ul class="list-group list-group-flush" ng-repeat="selected in selectedData | limitTo:repeatLimit">
                             <li class="list-group-item">{{selected.name}}</li>
                             <li class="list-group-item">{{selected.rating}}</li>
                             <li class="list-group-item">{{selected.author}}</li>
@@ -64,12 +73,26 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section>
+    </section>-->
+    
+    <section ng-hide="searchDapp">
         <div class="container">
+            <div class ="row">
+                <div class="col">
+                    <img src="http://via.placeholder.com/782x250" class="img-fluid" alt="Responsive image">
+                </div>
+
+                <div class="col">
+                    <h2>Today's special <span class="badge badge-secondary">New</span></h2>
+                    <p>Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col">
+                    
+                    
+
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">

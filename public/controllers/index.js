@@ -7,7 +7,8 @@ angular.module('app').controller('indexController',function($scope,dataService){
     $scope.allProjects = dataService.allProjects;
     $scope.selectedData = dataService.selectedData;
 
-    $scope.repeatLimit = 6;
+    $scope.searchLimit = 10;
+    $scope.selectLimit = 5;
 
     $scope.rowSelected = function(index,name){
 
@@ -33,8 +34,6 @@ angular.module('app').controller('indexController',function($scope,dataService){
                     $scope.selectedData.push($scope.selected);
 
                     $scope.selected.counter = $scope.selectedData.length;
-                    
-                    console.log($scope.selectedData);
                 }
             }
         }else{
@@ -43,7 +42,7 @@ angular.module('app').controller('indexController',function($scope,dataService){
     }
 
     $scope.isVisible = false;
-    $scope.showHide = function() {
+    $scope.showHideSelected = function() {
         $scope.isVisible = $scope.isVisible ? false : true;
     }
 });
