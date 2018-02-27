@@ -18,7 +18,8 @@ angular.module('app').controller('indexController',function($scope,dataService){
             //Find selected name
             for(var i=0;i<$scope.allProjects.length;i++){
                 if(name==$scope.allProjects[i].name){
-                    $scope.selected = [];
+                    $scope.selected = {};
+                    $scope.selected.trend = $scope.allProjects[i].trend;
                     $scope.selected.logo = $scope.allProjects[i].logo;
                     $scope.selected.name = $scope.allProjects[i].name;
                     $scope.selected.rating = $scope.allProjects[i].rating;
@@ -27,11 +28,12 @@ angular.module('app').controller('indexController',function($scope,dataService){
                     $scope.selected.author = $scope.allProjects[i].author;
                     $scope.selected.licence = $scope.allProjects[i].licence;
                     $scope.selected.tag = $scope.allProjects[i].tag;
-                    $scope.selected.images = $scope.allProjects[i].images;
-                    $scope.selected.reviews = $scope.allProjects[i].reviews;
-                    $scope.selected.comments = $scope.allProjects[i].comments;
+                    $scope.selected.image = $scope.allProjects[i].image;
+                    $scope.selected.review = $scope.allProjects[i].review;
+                    $scope.selected.comment = $scope.allProjects[i].comment;
 
                     $scope.selectedData.push($scope.selected);
+                    console.log($scope.selected);
 
                     $scope.selected.counter = $scope.selectedData.length;
                 }
