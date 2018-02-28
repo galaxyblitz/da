@@ -15,11 +15,13 @@
 	<body>
 		<header>
 			<section ng-controller="navController">
-                <ul class="nav">
-                    <li ng-repeat="item in items"><a class="nav-link" href="{{item.path}}">{{item.title}}</a></li>
-                </ul>
+				<ul class="nav">
+					<li class="nav-item" ng-repeat="item in items"><a class="nav-link" href="{{item.path}}">{{item.title}}</a></li>
+				</ul>
 			</section>
 		</header>
+
+		<br>
 
         <!--MAIN CONTENT AND INJECTED VIEWS-->
 		<main id="main">
@@ -27,6 +29,8 @@
             <!--this is where content will be injected-->
             <div ng-view></div>
 		</main>
+
+		<br>
 
 		<footer>
 			<section>

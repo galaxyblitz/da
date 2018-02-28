@@ -1,14 +1,11 @@
 <section>
-
-    <br>
-    
     <section>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3>Eos Index <small>v1.0</small></h3>
+                    <h3 class="text-center">Dapp index <small>v1.0</small></h3>
                     <br>
-                    <input type="text" ng-model="searchDapp" class="form-control">
+                    <input type="text" ng-model="searchallProjects.name" class="form-control">
                     <div class="text-secondary">
                     </div>
                 </div>
@@ -18,104 +15,22 @@
     
     <br>
     
-    <section ng-show="searchDapp">
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p><small>* You can search by <strong>name</strong>, <strong>rating</strong>, <strong>author</strong> and <strong>tag</strong></small></p>
-                    <p><small>* You have selected <strong>{{selected.counter}}</strong> items, only <strong>{{selectLimit}}</strong> will show up.</small></p>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Rating</th>
-                                <th scope="col">Author</th>
-                                <th scope="col">Tag</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="dapp in allProjects | filter:searchDapp | limitTo:searchLimit" ng-class="{'table-primary':$index==selectedRow}" ng-click="rowSelected($index,dapp.name); showHide();">
-                                <th scope="row">{{$index+1}}</th>
-                                <th>{{dapp.name}}</th>
-                                <td>{{dapp.rating}}</td>
-                                <td>{{dapp.author}}</td>
-                                <td>{{dapp.tag}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!--<div class="col" ng-show="showHideSelected">
-                    <ul class="list-group list-group-flush" ng-repeat="selected in selectedData | limitTo:selectLimit">
-                        <li class="list-group-item">{{selected.name}}</li>
-                        <li class="list-group-item">{{selected.rating}}</li>
-                        <li class="list-group-item">{{selected.author}}</li>
-                        <li class="list-group-item">{{selected.tag}}</li>
-                    </ul>
-                </div>-->
-            </div>
-        </div>
-    </section>
-
-    <!--<section ng-show="searchDapp">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="col" ng-show="showHideSelected">
-                        <ul class="list-group list-group-flush" ng-repeat="selected in selectedData | limitTo:repeatLimit">
-                            <li class="list-group-item">{{selected.name}}</li>
-                            <li class="list-group-item">{{selected.rating}}</li>
-                            <li class="list-group-item">{{selected.author}}</li>
-                            <li class="list-group-item">{{selected.tag}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    
-    <section ng-hide="searchDapp">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="http://via.placeholder.com/286x180" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title <small>#1</small></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary btn-block">Go somewhere</a>
-                        </div>
+                    <div class="list-group">
+                        <a href="{{dapp.path}}" class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="dapp in allProjects | filter: searchallProjects | orderBy: 'trend'">
+                            <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{dapp.name}}</h5>
+                            <small>{{dapp.rating}}</small>
+                            </div>
+                            <p class="mb-1">{{dapp.info}}</p>
+                            <small>{{dapp.licence}}</small>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-            <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small>3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small>Donec id elit non mi porta.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-    </div>
 </section>
