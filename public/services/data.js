@@ -15,7 +15,7 @@ angular.module('app').service('dataService', function($http){
             "social_media": [ "https://github.com/eos42/Chintai", "https://t.me/ChintaiEOS" ],
             "tag": [ "leasing", "financing" ],
             "image": [ "assets/img/EOS421.png", "assets/img/EOS422.png", "assets/img/EOS423.png" ],
-            "info": [ "LChintai is envisaged to sit alongside other EOS Essentials as a community owned dApp solution for efficient token leasing", "We propose a different approach that provides a highly liquid, transparent token leasing market, and which gives fair market value to all participants regardless of token size holding or token size requirements.", "This will be free to use for both sides as a crucial means of ensuring full market efficiency, functioning and price discovery without transaction fee or pool distortion." ]
+            "info": [ "Chintai is envisioned to sit alongside other EOS Essentials as a community owned dApp solution for efficient token leasing", "We propose a different approach that provides a highly liquid, transparent token leasing market, and which gives fair market value to all participants regardless of token size holding or token size requirements.", "This will be free to use for both sides as a crucial means of ensuring full market efficiency, functioning and price discovery without transaction fee or pool distortion." ]
         },
         {
             "id": 1,
