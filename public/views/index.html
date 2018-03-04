@@ -1,36 +1,45 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Index</li>
+    </ol>
+</nav>
+
 <section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="text-center">Dapp index <small>v1.0</small></h3>
-                    <br>
-                    <input type="text" ng-model="searchallProjects.name" class="form-control">
-                    <div class="text-secondary">
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center">Dapp index <small>v1.0</small></h2>
+                <br>
+                <input type="text" ng-model="searchallProjects.name" class="form-control">
+                <div class="text-secondary">
                 </div>
             </div>
         </div>
-    </section>
-    
-    <br>
-    
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="list-group">
-                        <a href="{{dapp.path}}" class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="dapp in allProjects | filter: searchallProjects | orderBy: 'trend'">
-                            <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{dapp.name}}</h5>
-                            <small>{{dapp.rating}}</small>
+    </div>
+</section>
+
+<br>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="list-group">
+                    <a href="{{dapp.path}}" class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="dapp in allProjects | filter: searchallProjects | orderBy: 'id'">
+                        <div class="media">
+                            <img class="align-self-center mr-3 rounded" src="{{dapp.logo}}" alt="Generic placeholder image">
+                            <div class="media-body">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{dapp.name}}</h5>
+                                    <small>{{dapp.id}}</small>
+                                </div>
+                                <p>{{dapp.info[0]}}</p>
+                                <small>{{dapp.license}}</small>
                             </div>
-                            <p class="mb-1">{{dapp.info}}</p>
-                            <small>{{dapp.licence}}</small>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </section>

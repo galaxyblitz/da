@@ -1,30 +1,35 @@
 "use strict";
 
-//configure our routes
 angular.module('app').config(function($routeProvider){
     $routeProvider
-    //route for the home page
         .when('/',{
             templateUrl:'public/views/index.html',
             controller:'indexController',
             activetab:'index'
         })
-        //route for the about page
-        .when('/home',{
-            templateUrl:'public/views/home.html',
-            controller:'homeController',
-            activetab:'home'
+        .when('/rating',{
+            templateUrl:'public/views/rating.html',
+            controller:'ratingController',
+            activetab:'rating'
         })
-        //route for the about page
-        .when('/trends',{
-            templateUrl:'public/views/trends.html',
-            controller:'trendsController',
-            activetab:'trends'
+        .when('/about',{
+            templateUrl:'public/views/about.html',
+            controller:'aboutController',
+            activetab:'about'
         })
-        //route for the contact page
-        .when('/status',{
-            templateUrl:'public/views/status.html',
-            controller:'statusController',
-            activetab:'status'
+        .when('/scatter',{
+            templateUrl:'public/views/projects/scatter.html',
+            controller:'scatterController',
+            activetab:'scatter'
+        })
+        .when('/everipedia',{
+            templateUrl:'public/views/projects/everipedia.html',
+            controller:'everipediaController',
+            activetab:'everipedia'
+        })
+        .when('/chintai',{
+            templateUrl:'public/views/projects/chintai.html',
+            controller:'chintaiController',
+            activetab:'chintai'
         });
 })
