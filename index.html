@@ -1,81 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-cloak>
-	<head>
-		<title>EosIndex v1.0</title>
-		<!-- Meta tags -->
-	    <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="This is a template">
-		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-		<meta name="author" content="JL">
-		<!-- CSS -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-	</head>
-	<body>
-		<header>
-			<section ng-controller="navController">
-				<ul class="nav">
-					<li class="nav-item" ng-repeat="item in items">
-						<a class="nav-link" href="{{item.path}}">{{item.title}}</a>
-					</li>
-				</ul>
-			</section>
-		</header>
 
-		<br>
+<head>
+	<title>EosIndex v1.0</title>
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="This is a template">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="JL">
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-		<main id="main">
-            <div ng-view></div>
-		</main>
+<body>
+	<header>
+		<section ng-controller="navController">
+			<ul class="nav">
+				<li class="nav-item" ng-repeat="item in items">
+					<a class="nav-link" href="{{item.path}}">{{item.title}}</a>
+				</li>
+			</ul>
+		</section>
+	</header>
 
-		<br>
+	<br>
 
-		<footer>
-			<section>
-				<br>
-				<hr>
-				<br>
-				<div class="container text-center">
-					<div class="row">
-						<div class="col">
-							<p><strong>DAPP INDEX</strong></p>
-							<p>Thank you for using "Company name".</p>
-							<p>© 2017 Company Name. All rights reserved</p>
-						</div>
+	<main id="main">
+		<div ng-view></div>
+	</main>
+
+	<br>
+
+	<footer>
+		<section>
+			<br>
+			<hr>
+			<br>
+			<div class="container text-center">
+				<div class="row">
+					<div class="col">
+						<p>
+							<strong>DAPP INDEX</strong>
+						</p>
+						<p>Thank you for using "Company name".</p>
+						<p>© 2017 Company Name. All rights reserved</p>
 					</div>
 				</div>
-			</section>
-        </footer>
-		
-		<!-- Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-		<!-- Angular -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
-        <!-- Route -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
-		<!-- ngMock -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-mocks/1.6.9/angular-mocks.min.js" data-semver="1.6.5" data-require="angular-mocks@1.6.6"></script>
-		<!-- javascript -->
-        <script src="assets/js/script.js"></script>
-        <!-- public -->
-		<script src="public/app.js"></script>
-		<script src="public/routes.js"></script>
-		<script src="public/services/data.js"></script>
-		<script src="public/services/updatedata.js"></script>
-		<script src="public/controllers/nav.js"></script>
-		<script src="public/controllers/index.js"></script>
-		<script src="public/controllers/rating.js"></script>
-		<script src="public/controllers/about.js"></script>
-		<!-- projects -->
-		<script src="public/controllers/projects/scatter.js"></script>
-		<script src="public/controllers/projects/everipedia.js"></script>
-		<script src="public/controllers/projects/chintai.js"></script>
-		<!-- no JS -->
-		<noscript>Sorry, your browser does not support JavaScript!</noscript>
-	</body>
+			</div>
+		</section>
+	</footer>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<!-- Angular -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<!-- Route -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+	<!-- ngMock -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-mocks/1.6.9/angular-mocks.min.js" data-semver="1.6.5" data-require="angular-mocks@1.6.6"></script>
+	<!-- javascript -->
+	<script src="assets/js/script.js"></script>
+	<!-- public -->
+	<script src="public/app.js"></script>
+	<script src="public/routes.js"></script>
+	<script src="public/services/data.js"></script>
+	<script src="public/services/updatedata.js"></script>
+	<script src="public/controllers/nav.js"></script>
+	<script src="public/controllers/index.js"></script>
+	<script src="public/controllers/rating.js"></script>
+	<script src="public/controllers/about.js"></script>
+	<!-- projects -->
+	<script src="public/controllers/projects/scatter.js"></script>
+	<script src="public/controllers/projects/everipedia.js"></script>
+	<script src="public/controllers/projects/chintai.js"></script>
+	<!-- no JS -->
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+</body>
+
 </html>

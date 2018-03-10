@@ -1,12 +1,14 @@
 {
-  "name": "TestMania",
+  "name": "eosindex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "prettier"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {

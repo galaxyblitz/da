@@ -1,6 +1,8 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#/!">Index</a></li>
+        <li class="breadcrumb-item">
+            <a href="#/!">Index</a>
+        </li>
         <li class="breadcrumb-item active" aria-current="page">{{allProjects[2].name}}</li>
     </ol>
 </nav>
@@ -10,10 +12,14 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>{{allProjects[2].name}} <small><span class="badge badge-secondary"># {{allProjects[2].rank}}</span></small></h2>
-                
+                <h2>{{allProjects[2].name}}
+                    <small>
+                        <span class="badge badge-secondary"># {{allProjects[2].rank}}</span>
+                    </small>
+                </h2>
+
                 <br>
-                
+
                 <img src="{{allProjects[2].image}}" class="img-fluid" alt="Responsive image">
             </div>
         </div>
@@ -27,8 +33,12 @@
         <div class="row">
             <div class="col">
                 <h3>
-                    <span id='clickableAwesomeFont' href="{{allProjects[2].twitter}}"><i class="fab fa-twitter"></i></span>
-                    <span id='clickableAwesomeFont' href="{{allProjects[2].github}}"><i class="fab fa-github"></i></span>
+                    <span id='clickableAwesomeFont' href="{{allProjects[2].twitter}}">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span id='clickableAwesomeFont' href="{{allProjects[2].github}}">
+                        <i class="fab fa-github"></i>
+                    </span>
                 </h3>
             </div>
         </div>
@@ -57,13 +67,24 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <small>* NOTE the rating system is not yet functional (current rating: <strong>{{allProjects[2].rating}}</strong>)</small>
+                <small>* NOTE the rating system is not yet functional (current rating:
+                    <strong>{{allProjects[2].rating}}</strong>)</small>
                 <h4>
-                    <span id='clickableAwesomeFont' href="#"><i class="fas fa-star"></i></span>
-                    <span id='clickableAwesomeFont' href="#"><i class="fas fa-star"></i></span>
-                    <span id='clickableAwesomeFont' href="#"><i class="fas fa-star"></i></span>
-                    <span id='clickableAwesomeFont' href="#"><i class="fas fa-star"></i></span>
-                    <span id='clickableAwesomeFont' href="#"><i class="fas fa-star-half"></i></span>
+                    <span id='clickableAwesomeFont' href="#">
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span id='clickableAwesomeFont' href="#">
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span id='clickableAwesomeFont' href="#">
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span id='clickableAwesomeFont' href="#">
+                        <i class="fas fa-star"></i>
+                    </span>
+                    <span id='clickableAwesomeFont' href="#">
+                        <i class="fas fa-star-half"></i>
+                    </span>
                 </h4>
 
                 <br>
