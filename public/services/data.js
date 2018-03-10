@@ -11,6 +11,7 @@ angular.module("app").service("dataService", function($http) {
       website: "https://github.com/eos42/Chintai",
       author: "EOS42",
       license: "Unknown",
+      status: "offline",
       social_media: [
         "https://github.com/eos42/Chintai",
         "https://t.me/ChintaiEOS"
@@ -30,6 +31,7 @@ angular.module("app").service("dataService", function($http) {
       website: "http://scatter-eos.com/",
       author: "Nathan James",
       license: "MIT",
+      status: "online",
       social_media: [
         "https://github.com/EOSEssentials/Scatter",
         "https://twitter.com/Scatter_EOS"
@@ -49,6 +51,7 @@ angular.module("app").service("dataService", function($http) {
       website: "https://everipedia.org/",
       author: "Sam Kazemian, Theodor Forselius",
       license: "Unknown",
+      status: "online",
       social_media: [
         "https://github.com/EOSEssentials/Scatter",
         "https://twitter.com/Scatter_EOS"
@@ -68,6 +71,7 @@ angular.module("app").service("dataService", function($http) {
       website: "https://everipedia.org/",
       author: "Sam Kazemian, Theodor Forselius",
       license: "Unknown",
+      status: "offline",
       social_media: [
         "https://github.com/EOSEssentials/Scatter",
         "https://twitter.com/Scatter_EOS"

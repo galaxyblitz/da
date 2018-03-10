@@ -1,11 +1,13 @@
 "use strict";
 
-//create the controller and inject Angular's $scope
-angular.module('app').controller('navController',['$scope', function($scope){
+angular.module("app").controller("navController", [
+  "$scope",
+  function($scope) {
     //The only thing missing is highlighting current path
     $scope.items = [
-        {path: '#/!',title: 'Index'},
-        {path: '#!rating',title: 'Rating'},
-        {path: '#!about',title: 'About'}
+      { path: "#/!", title: "Index" },
+      { path: "#!rating", title: "Rating" },
+      { path: "#!about", title: "About" }
     ];
-}]);
+  }
+]);

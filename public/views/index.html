@@ -36,7 +36,9 @@
                                     <small>{{dapp.id}}</small>
                                 </div>
                                 <p>{{dapp.info[0]}}</p>
-                                <small>{{dapp.license}}</small>
+                                <small ng-class="{'text-danger':dapp.status == 'offline', 'text-success':dapp.status == 'online'}">
+                                    {{dapp.status}}
+                                </small>
                             </div>
                         </div>
                     </a>
